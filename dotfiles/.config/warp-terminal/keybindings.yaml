@@ -1,0 +1,4 @@
+---
+"terminal:paste": ctrl-v
+"editor_view:clear_buffer": ctrl-shift-C
+"terminal:copy": ctrl-c

@@ -1,0 +1,129 @@
+{
+    "position": "top",
+    //"height": 30,
+    "width": 1900,
+    "modules-left": ["hyprland/window"],
+    "modules-center": ["hyprland/workspaces","cpu","memory", "battery", "pulseaudio", "network","custom/date", "clock", "tray", "custom/settings", "custom/exit"],
+    "modules-right": ["custom/player"],
+    // Modules configuration
+    "hyprland/language": {
+		"format": "{short}"
+    },
+    "hyprland/window": {
+        "rewrite": {
+            "(.*) - Brave": "$1",
+            "(.*) - Chromium": "$1",
+            "(.*) - Brave Search": "$1",
+            "(.*) - Outlook": "$1",
+            "(.*) Microsoft Teams": "$1"
+        },
+        "separate-outputs": true,
+        "max-length": 50,
+        "on-click": "dunstify \"$(hyprctl activewindow -j | jq -r .title)\""
+    },
+	 "hyprland/workspaces" : {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{}",
+        "format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": ""
+        },
+        "persistent-workspaces": {
+             "*": 3
+        }
+    },
+	"tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+	"custom/date": {
+    		"format": "󰸗 {}",
+		"interval": 3600,
+		"exec": "$HOME/bin/waybar-date.sh"
+	},
+	"custom/exit": {
+        "format": "",
+        "tooltip-format": "Power Menu",
+        "on-click": "wlogout",
+        "tooltip": true
+    },
+    //"custom/settings": {
+    //    "format": "",
+    //    "on-click": "rofimenu_systemsettings",
+    //    "tooltip-format": "Settings"
+    //},
+    "custom/player": {
+        "exec": "python3 ~/.config/waybar/custom/mediaplayer.py",
+        "format": "{}",
+        "max-length": 50 ,
+        "return-type": "json",
+        "on-click-middle": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "on-click": "playerctl previous"
+    },
+	"clock": {
+        "timezone": "Europe/London",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%H:%M}",
+        "format-alt": " {:%Y-%m-%d}"
+    },
+	"battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{icon}  {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": true
+    },
+	"network": {
+        	"format-wifi": " {signalStrength}%",
+        	"format-ethernet": " 100%",
+        	"format-linked": "{ifname} (No IP) ",
+        	"format-disconnected": "Disconnected",
+		"tooltip-format-wifi": " {essid} | Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+			"on-click": "alacritty -e nmtui & nm-connection-editor",
+			"max-length": 10,
+        "tooltip-format-ethernet": " {ipaddr} | Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+			"on-click": "alacritty -e nmtui & nm-connection-editor",
+			"max-length": 20
+	},
+	"pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}{volume}%",
+        "format-bluetooth": "{icon}{volume}%",
+        //"format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "{icon}{volume}%",
+        //"format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "{format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "memory": {
+        "format": " {}%",
+        "on-click": "flatpak run io.missioncenter.MissionCenter"
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "on-click": "flatpak run io.missioncenter.MissionCenter"
+    }
+}

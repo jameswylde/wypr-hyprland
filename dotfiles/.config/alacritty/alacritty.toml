@@ -1,0 +1,57 @@
+#==================================================
+#   ██╗    ██╗██╗   ██╗██████╗ ██████╗ 
+#   ██║    ██║╚██╗ ██╔╝██╔══██╗██╔══██╗
+#   ██║ █╗ ██║ ╚████╔╝ ██████╔╝██████╔╝
+#   ██║███╗██║  ╚██╔╝  ██╔═══╝ ██╔══██╗
+#   ╚███╔███╔╝   ██║   ██║     ██║  ██║
+#    ╚══╝╚══╝    ╚═╝   ╚═╝     ╚═╝  ╚═╝
+#
+#   hyprland config by wyldej
+#
+#==================================================
+
+
+
+general.import = [
+      "~/.config/alacritty/themes/themes/dracula.toml"
+]
+
+[font]
+size = 15.0
+
+[font.normal]
+family = "JetBrainsMono NerdFont"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono NerdFont"
+style = "Bold"
+
+[cursor]
+blink_interval = 500
+[cursor.style]
+shape = "Beam"
+blinking = "Always"
+
+[window]
+opacity = 0.70
+decorations = "full"
+
+[window.padding]
+x = 40
+y = 10
+
+[selection]
+save_to_clipboard = true
+
+[keyboard]
+bindings = [
+  # Ctrl+C for copy
+  { key = "C", mods = "Control", action = "Copy" },
+
+  # Ctrl+Shift+C for cancel (SIGINT) - no action defined, will send Ctrl+C to terminal. Works as Ctrl+Alt+C
+  { key = "C", mods = "Control|Shift", action = "None" },
+
+  # Ctrl+V for paste
+  { key = "V", mods = "Control", action = "Paste" },
+]

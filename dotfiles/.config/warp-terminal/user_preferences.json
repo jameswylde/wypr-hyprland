@@ -1,0 +1,33 @@
+{
+  "prefs": {
+    "SystemTheme": "true",
+    "SameLinePromptBlockState": "\"DoNotShow\"",
+    "CrashReportingEnabled": "false",
+    "ReceivedReferralTheme": "\"Inactive\"",
+    "HasAutoOpenedWelcomeFolder": "true",
+    "OverrideOpacity": "19",
+    "WelcomeTipsFeaturesUsed": "[{\"Action\":\"OpenWarpDrive\"},{\"Hint\":\"BlockAction\"},{\"Action\":\"CommandSearch\"},{\"Hint\":\"CreateBlock\"},{\"Hint\":\"BlockSelect\"},{\"Action\":\"CommandPalette\"},{\"Action\":\"SplitPane\"},{\"Action\":\"ThemePicker\"}]",
+    "AIRequestLimitInfo": "{\"limit\":100,\"num_requests_used_since_refresh\":0,\"next_refresh_time\":\"2024-11-01T17:46:42.998770Z\",\"is_unlimited\":false}",
+    "HonorPS1": "false",
+    "Notifications": "{\"mode\":\"Enabled\",\"is_long_running_enabled\":true,\"long_running_threshold\":{\"secs\":30,\"nanos\":0},\"is_password_prompt_enabled\":true}",
+    "ExperimentId": "420df3ea-ef77-499d-9255-fd8d4c6e3163",
+    "AutosuggestionAcceptedCount": "2",
+    "InputAutodetectionBannerDismissed": "true",
+    "Spacing": "\"Normal\"",
+    "AIAutoDetectionEnabled": "false",
+    "ShowHintText": "false",
+    "WelcomeTipsCompleted": "true",
+    "AIAssistantRequestLimitInfo": "{\"limit\":100,\"num_requests_used_since_refresh\":0,\"next_refresh_time\":\"2024-11-01T17:46:42.998770482Z\",\"is_unlimited\":false}",
+    "AgentModeOnboardingBlockShown": "true",
+    "NotebookFontSize": "14.0",
+    "FontName": "\"Hack\"",
+    "TelemetryEnabled": "false",
+    "FontSize": "14.0",
+    "RestoreSession": "false",
+    "HasDismissedWarpDriveWelcome": "true",
+    "AliasExpansionBannerSeen": "true",
+    "InputMode": "\"Waterfall\"",
+    "ChangelogVersions": "{\"v0.2024.09.24.08.02.stable_01\":true}",
+    "SavedPrompt": "{\"CustomChipSelection\":{\"chips\":[{\"chip\":\"Username\",\"config\":{}},{\"chip\":\"KubernetesContext\",\"config\":{}},{\"chip\":\"WorkingDirectory\",\"config\":{}},{\"chip\":\"ShellGitBranch\",\"config\":{}},{\"chip\":\"GitDirtyFiles\",\"config\":{}}],\"same_line_prompt_enabled\":false,\"separator\":\"None\"}}"
+  }
+}

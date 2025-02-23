@@ -1,0 +1,112 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "source": "~/.config/fastfetch/drac.png",
+    "height": 10,
+    "width": 20,
+    "padding": {
+      "right": 0,
+      "top": 3
+    }
+  },
+  "general": {
+    "multithreading": true
+  },
+  "display": {
+    "separator": "➜   "
+  },
+  "modules": [
+    "break",
+    //{
+    //  "type": "title",
+    //  "format": "                                {6}{7}{8}"
+    //},
+    "break",
+    //{
+    //  "type": "custom",
+    //  "format": "┌──────────────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
+    //},
+    "break",
+    {
+      "key": "     OS           ",
+      "keyColor": "green",
+      "type": "os"
+    },
+    {
+      "key": "    󰌢 Machine      ",
+      "keyColor": "cyan",
+      "type": "host"
+    },
+    {
+      "key": "    󰅐 Uptime       ",
+      "keyColor": "blue",
+      "type": "uptime"
+    },
+    //{
+    //  "key": "     Packages     ",
+    //  "keyColor": "cyan",
+    //  "type": "packages"
+    //},
+    {
+      "key": "     WM           ",
+      "keyColor": "green",
+      "type": "wm"
+    },
+    {
+      "key": "     Shell        ",
+      "keyColor": "cyan",
+      "type": "shell"
+    },
+    {
+      "key": "     Terminal     ",
+      "keyColor": "blue",
+      "type": "terminal"
+    },
+    //{
+    //  "key": "     Font         ",
+    //  "keyColor": "blue",
+    //  "type": "terminalfont"
+    //},
+    {
+      "key": "    󰻠 CPU          ",
+      "keyColor": "green",
+      "type": "cpu"
+    },
+    {
+      "key": "    󰍛 GPU          ",
+      "keyColor": "blue",
+      "type": "gpu"
+    },
+    {
+      "key": "    󰑭 Memory       ",
+      "keyColor": "cyan",
+      "type": "memory"
+    },
+    //{
+    //  "key": "     Wifi         ",
+    //  "keyColor": "green",
+    //  "type": "wifi"
+    //},
+    //{
+    //  "key": "    󰩟 Local IP     ",
+    //  "keyColor": "cyan",
+    //  "type": "localip",
+    //  "compact": true
+    //},
+    //"break",
+    //{
+    //  "type": "custom",
+    //  "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
+    //},
+    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 5,
+      "symbol": "circle",
+      "block": {
+        "width": 10
+      }
+    }
+  ]
+}

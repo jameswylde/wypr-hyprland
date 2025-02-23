@@ -1,0 +1,78 @@
+[
+    {
+        "key": "general:border_size",
+        "value": 2
+    },
+    {
+        "key": "decoration:inactive_opacity",
+        "value": 1.0
+    },
+    {
+        "key": "decoration:dim_inactive",
+        "value": false
+    },
+    {
+        "key": "decoration:dim_strength",
+        "value": 0.5
+    },
+    {
+        "key": "decoration:blur:enabled",
+        "value": true
+    },
+    {
+        "key": "decoration:blur:size",
+        "value": 5
+    },
+    {
+        "key": "decoration:blur:ignore_opacity",
+        "value": false
+    },
+    {
+        "key": "general:col.active_border",
+        "value": "rgb(ffffff)"
+    },
+    {
+        "key": "general:gaps_in",
+        "value": 5
+    },
+    {
+        "key": "general:gaps_out",
+        "value": 10
+    },
+    {
+        "key": "decoration:rounding",
+        "value": 10
+    },
+    {
+        "key": "decoration:active_opacity",
+        "value": 1.0
+    },
+    {
+        "key": "decoration:drop_shadow",
+        "value": false
+    },
+    {
+        "key": "decoration:shadow_range",
+        "value": 4
+    },
+    {
+        "key": "decoration:blur:passes",
+        "value": 1
+    },
+    {
+        "key": "decoration:blur:xray",
+        "value": false
+    },
+    {
+        "key": "decoration:blur:contrast",
+        "value": 0.8
+    },
+    {
+        "key": "decoration:blur:vibrancy",
+        "value": 0.1
+    },
+    {
+        "key": "decoration:blur:popups",
+        "value": false
+    }
+]

@@ -1,0 +1,250 @@
+###################################################################################################################
+
+# Use the color palette
+palette = "dracula"
+
+# Define Dracula color palette
+[palettes.dracula]
+background = "#282a36"
+current_line = "#44475a"
+foreground = "#f8f8f2"
+comment = "#6272a4"
+cyan = "#8be9fd"
+green = "#50fa7b"
+orange = "#ffb86c"
+pink = "#ff79c6"
+purple = "#bd93f9"
+red = "#ff5555"
+yellow = "#f1fa8c"
+
+
+format = """\
+    $sudo\
+    $username\
+    $directory\
+    $git_branch\
+    $git_status\
+    $cmd_duration\
+    $character\
+    $line_break\
+"""
+
+[sudo]
+disabled = false
+format = "[sudo](bold red)  "
+
+[shell]
+disabled = true
+bash_indicator = "bash"
+format = "[$indicator]($style)  "
+style = "cyan bold"
+
+[username]
+show_always = true
+format = "[$user](bold pink)  "
+
+[directory]
+disabled = false
+format = "[$path](bold green)[  $read_only]( $read_only_style)"
+truncate_to_repo = false
+use_logical_path = true
+home_symbol = "~"
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+
+[character] 
+success_symbol = "[➜ ](bold white)"
+error_symbol = "[X ](bold red)"
+
+[cmd_duration]
+disabled = false
+format = "[$duration]($style) "
+style = "bold yellow"
+
+[line_break]
+disabled = false
+
+
+###################################################################################################################
+
+
+[aws]
+format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+
+[bun]
+format = '\[[$symbol($version)]($style)\]'
+
+[c]
+disabled = false
+
+[cmake]
+format = '\[[$symbol($version)]($style)\]'
+
+[cobol]
+format = '\[[$symbol($version)]($style)\]'
+
+[conda]
+format = '\[[$symbol$environment]($style)\]'
+
+[crystal]
+format = '\[[$symbol($version)]($style)\]'
+
+[daml]
+format = '\[[$symbol($version)]($style)\]'
+
+[dart]
+format = '\[[$symbol($version)]($style)\]'
+
+[deno]
+format = '\[[$symbol($version)]($style)\]'
+
+[docker_context]
+format = '\[[$symbol$context]($style)\]'
+
+[dotnet]
+format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
+
+[elixir]
+format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
+
+[elm]
+format = '\[[$symbol($version)]($style)\]'
+
+[erlang]
+format = '\[[$symbol($version)]($style)\]'
+
+[fennel]
+format = '\[[$symbol($version)]($style)\]'
+
+[fossil_branch]
+format = '\[[$symbol$branch]($style)\]'
+
+[gcloud]
+format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
+
+[golang]
+format = '\[[$symbol($version)]($style)\]'
+
+[gradle]
+format = '\[[$symbol($version)]($style)\]'
+
+[guix_shell]
+format = '\[[$symbol]($style)\]'
+
+[haskell]
+format = '\[[$symbol($version)]($style)\]'
+
+[haxe]
+format = '\[[$symbol($version)]($style)\]'
+
+[helm]
+format = '\[[$symbol($version)]($style)\]'
+
+[hg_branch]
+format = '\[[$symbol$branch]($style)\]'
+
+[java]
+format = '\[[$symbol($version)]($style)\]'
+
+[julia]
+format = '\[[$symbol($version)]($style)\]'
+
+[kotlin]
+format = '\[[$symbol($version)]($style)\]'
+
+[kubernetes]
+format = '\[[$symbol$context( \($namespace\))]($style)\]'
+
+[lua]
+format = '\[[$symbol($version)]($style)\]'
+
+[memory_usage]
+format = '\[$symbol[$ram( | $swap)]($style)\]'
+
+[meson]
+format = '\[[$symbol$project]($style)\]'
+
+[nim]
+format = '\[[$symbol($version)]($style)\]'
+
+[nix_shell]
+format = '\[[$symbol$state( \($name\))]($style)\]'
+
+[nodejs]
+format = '\[[$symbol($version)]($style)\]'
+
+[ocaml]
+format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
+
+[opa]
+format = '\[[$symbol($version)]($style)\]'
+
+[openstack]
+format = '\[[$symbol$cloud(\($project\))]($style)\]'
+
+[os]
+format = '\[[$symbol]($style)\]'
+
+[package]
+format = '\[[$symbol$version]($style)\]'
+
+[perl]
+format = '\[[$symbol($version)]($style)\]'
+
+[php]
+format = '\[[$symbol($version)]($style)\]'
+
+[pijul_channel]
+format = '\[[$symbol$channel]($style)\]'
+
+[pulumi]
+format = '\[[$symbol$stack]($style)\]'
+
+[purescript]
+format = '\[[$symbol($version)]($style)\]'
+
+[python]
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+
+[raku]
+format = '\[[$symbol($version-$vm_version)]($style)\]'
+
+[red]
+format = '\[[$symbol($version)]($style)\]'
+
+[ruby]
+format = '\[[$symbol($version)]($style)\]'
+
+[rust]
+format = '\[[$symbol($version)]($style)\]'
+
+[scala]
+format = '\[[$symbol($version)]($style)\]'
+
+[spack]
+format = '\[[$symbol$environment]($style)\]'
+
+[swift]
+format = '\[[$symbol($version)]($style)\]'
+
+[terraform]
+format = '\[[$symbol$workspace]($style)\]'
+
+[time]
+format = '\[[$time]($style)\]'
+
+[vagrant]
+format = '\[[$symbol($version)]($style)\]'
+
+[vlang]
+format = '\[[$symbol($version)]($style)\]'
+
+[zig]
+format = '\[[$symbol($version)]($style)\]'
+
+[solidity]
+format = '\[[$symbol($version)]($style)\]'
