@@ -17,7 +17,7 @@ general.import = [
 ]
 
 [font]
-size = 15.0
+size = 13.0
 
 [font.normal]
 family = "JetBrainsMono NerdFont"

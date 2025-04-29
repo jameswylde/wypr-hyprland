@@ -11,35 +11,37 @@ by Stephan Raabe (2024)
 */
 
 * {
-    font-family: JetBrains Mono;
+	font-family: JetBrains Mono;
 	background-image: none;
 	transition: 20ms;
 	box-shadow: none;
 }
 
 window {
-	background-color: rgba(40, 42, 54, 0.831);
+	background-color: rgba(40, 42, 54, 0.80);
 }
 
 button {
 	color: #FFFFFF;
-	font-size:80px;
+	font-size:50px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 20%;
+	background-size: 40%;
+	background-color: rgba(40, 42, 54, 1);
 	border-style: solid;
-	border: 10px solid #FFFFFF;
+	border: 10px solid #282a36;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 button:focus{
 	color: #ffffff;
-	border: 10px solid #50FA7B;
+	border: 10px solid #44475a;
 }
 button:active,
 button:hover {
 	color: #ffffff;
 	border: 10px solid #50FA7B;
+	background-color: rgb(40, 42, 54);
 }
 
 /* 

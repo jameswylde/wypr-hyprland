@@ -1,0 +1,87 @@
+@import "colors"
+
+* {
+  font: "JetBrainsMono NerdFont 14";
+  foreground: @foreground;
+  background-color: @background-darker;
+  border: 1px;
+  transparent: rgba(46, 52, 64, 0);
+}
+
+window {
+  width: 800;
+  height: 150;
+  orientation: horizontal;
+  location: center;
+  anchor: center;
+  border: 1;
+  border-color: @purple;
+  border-radius: 20px;
+  spacing: 0;
+  children: [ mainbox ];
+}
+
+mainbox {
+  spacing: 0;
+  children: [ inputbar, message, listview ];
+}
+
+inputbar {
+  color: @green;
+  margin: 10px;
+  padding: 10px;
+  border: 2px;
+  border-color: @background;
+  border-radius: 50px;
+}
+
+message {
+  border: 0;
+  padding: 0;
+}
+
+entry,
+prompt,
+case-indicator {
+  text-font: inherit;
+  text-color: inherit;
+}
+
+entry {
+  cursor: pointer;
+}
+
+listview {
+  layout: vertical;
+  padding: 10px;
+  lines: 1;
+  columns: 3;
+  border: 0;
+}
+
+element {
+  color: @cyan;
+  orientation: vertical;
+}
+
+element-text,
+element-icon {
+  background-color: inherit;
+  text-color: inherit;
+  horizontal-align: 0.5;
+}
+
+element-icon {
+  size: 64;
+}
+
+element selected.normal {
+  background-color: @background-darker;
+  border: 2px;
+  border-color: @background-darker;
+  border-radius: 50px;
+}
+
+scrollbar {
+  enabled: true;
+}

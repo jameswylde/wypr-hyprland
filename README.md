@@ -11,6 +11,12 @@ Dracula themed hyprland focusing more on legibility than aesthetics. Minimal tra
 
 ![Screenshot1](./other/screenshot1.png)
 
+![Screenshot2](./other/screenshot2.png)
+
+![Screenshot3](./other/screenshot3.png)
+
+![Screenshot4](./other/screenshot4.png)
+
 > Installer Script
 
  <img src="./other/install.gif" width="500" height="500">
@@ -27,7 +33,7 @@ cd wypr
 sudo bash install.sh
 ```
 
-Post install run `hyprctl monitors` and note your display's name and amend in *~/.config/hypr/hyprland.conf* under *monitor* header, e.g *monitor=DP-1* - setting resolution, refresh rate and scale accordingly. Also, changing under *workspace* header to the same value. 
+Post install run `hyprctl monitors` and note your display's name and amend in *~/.config/hypr/hyprland.conf* under *monitor* header, e.g *monitor=DP-1* - setting resolution, refresh rate and scale accordingly. Also, changing under *workspace* header to the same value.
 
 You can use *sed* to automate, for example `hyprctl monitors` returns *Virtual-1*, you can replace default *DP-1*:
 

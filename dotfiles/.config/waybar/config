@@ -1,9 +1,9 @@
 {
     "position": "top",
     //"height": 30,
-    "width": 1900,
+    "width": 1300,
     "modules-left": ["hyprland/window"],
-    "modules-center": ["hyprland/workspaces","cpu","memory", "battery", "pulseaudio", "network","custom/date", "clock", "tray", "custom/settings", "custom/exit"],
+    "modules-center": ["hyprland/workspaces","cpu","memory", "clock", "pulseaudio", "network","custom/date", "battery", "tray","custom/exit"],
     "modules-right": ["custom/player"],
     // Modules configuration
     "hyprland/language": {
@@ -18,7 +18,7 @@
             "(.*) Microsoft Teams": "$1"
         },
         "separate-outputs": true,
-        "max-length": 50,
+        "max-length": 20,
         "on-click": "dunstify \"$(hyprctl activewindow -j | jq -r .title)\""
     },
 	 "hyprland/workspaces" : {
@@ -36,7 +36,7 @@
         }
     },
 	"tray": {
-        // "icon-size": 21,
+        "icon-size": 14,
         "spacing": 10
     },
 	"custom/date": {
@@ -58,7 +58,7 @@
     "custom/player": {
         "exec": "python3 ~/.config/waybar/custom/mediaplayer.py",
         "format": "{}",
-        "max-length": 50 ,
+        "max-length": 25 ,
         "return-type": "json",
         "on-click-middle": "playerctl play-pause",
         "on-click-right": "playerctl next",
@@ -73,17 +73,18 @@
 	"battery": {
         "states": {
             // "good": 95,
-            "warning": 30,
-            "critical": 15
+            "warning": 25,
+            "critical": 10
         },
-        "format": "{icon}  {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{icon}  {time}",
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}% ",
+        "format-plugged": " {capacity}% ",
+        "format-alt": "{icon}{time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""],
-        "tooltip": true
+        "tooltip": true,
+        "on-click": "alacritty -e blueman-tray"
     },
 	"network": {
         	"format-wifi": " {signalStrength}%",
@@ -91,10 +92,10 @@
         	"format-linked": "{ifname} (No IP) ",
         	"format-disconnected": "Disconnected",
 		"tooltip-format-wifi": " {essid} | Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
-			"on-click": "alacritty -e nmtui & nm-connection-editor",
+			"on-click": "alacritty -e nmtui",
 			"max-length": 10,
         "tooltip-format-ethernet": " {ipaddr} | Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
-			"on-click": "alacritty -e nmtui & nm-connection-editor",
+			"on-click": "alacritty -e nmtui",
 			"max-length": 20
 	},
 	"pulseaudio": {
@@ -105,7 +106,7 @@
         "format-bluetooth-muted": "{icon}{volume}%",
         //"format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "{format_source}",
-        "format-source": "{volume}% ",
+        "format-source": " MUTE%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -114,16 +115,16 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", " ", " "]
+            "default": ["",""," "]
         },
         "on-click": "pavucontrol"
     },
     "memory": {
         "format": " {}%",
-        "on-click": "flatpak run io.missioncenter.MissionCenter"
+        "on-click": "alacritty -e btop"
     },
     "cpu": {
         "format": " {usage}%",
-        "on-click": "flatpak run io.missioncenter.MissionCenter"
+        "on-click":  "alacritty -e btop"
     }
 }
