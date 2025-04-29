@@ -11,8 +11,6 @@ Dracula themed hyprland focusing more on legibility than aesthetics. Minimal tra
 
 ![Screenshot1](./other/screenshot1.png)
 
-![Screenshot2](./other/screenshot2.png)
-
 ![Screenshot3](./other/screenshot3.png)
 
 ![Screenshot4](./other/screenshot4.png)
